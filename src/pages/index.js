@@ -133,17 +133,19 @@ const IndexPage = () => {
       <h1 style={headingStyles}>
         Congratulations
         <br />
-        <span style={headingAccentStyles}>— you just made a Gatsby site! </span>
+        <span style={headingAccentStyles}>— you just made a step to the CORGI Conf!</span>
         <span role="img" aria-label="Party popper emojis">
           🎉🎉🎉
         </span>
       </h1>
       <p style={paragraphStyles}>
-        Edit <code style={codeStyles}>src/pages/index.js</code> to see this page
-        update in real-time.{" "}
+        We are encouraged <code style={codeStyles}>so much</code> to see
+        you and your research in the list of our speakers.{" "}
         <span role="img" aria-label="Sunglasses smiley emoji">
           😎
         </span>
+        <br />
+        <a href="#form">Fill in the application</a>
       </p>
       <ul style={listStyles}>
         <li style={docLinkStyle}>
