@@ -1,0 +1,90 @@
+body {
+    background: #242424;
+}
+
+* {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.section {
+    width: calc(100vw - 40vw - 2*96px);
+}
+
+.section__title {
+    margin-top: 0;
+    margin-bottom: 64px;
+    max-width: 420px;
+    font-size: 36px;
+    line-height: 1.25;
+}
+
+.preview-img {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 40vw;
+    background-image: url('../images/corgi-hat.jpg');
+    background-size: cover;
+    background-position: 25%;
+}
+
+.speakers-wrapper {
+
+}
+
+.speaker {
+    margin-bottom: 48px;
+}
+
+.speaker__info {
+    display: flex;
+}
+
+.speaker__text {
+    align-self: center;
+}
+
+.speaker__img {
+    position: relative;
+    min-width: 124px;
+    width: 124px;
+    min-height: 124px;
+    height: 124px;
+    margin-right: 24px;
+    border: 1px solid #eaeaea;
+    border-radius: 124px;
+    overflow: hidden;
+}
+
+.speaker__img img {
+    display: block;
+    width: 100%;
+    min-height: 124px;
+}
+
+.speaker__author {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.speaker__job-title {
+    display: block;
+    margin-top: 12px;
+    max-width: 300px;
+    font-size: 14px;
+    opacity: 0.4;
+}
+
+.speaker__title {
+    margin-bottom: 0;
+    max-width: 470px;
+    color: #f28916;
+}
+
+.speaker__description {
+    margin-top: 12px;
+}
+

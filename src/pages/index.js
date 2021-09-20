@@ -1,18 +1,17 @@
 import * as React from "react"
 
+import './styles.css'
+
+import items from './items';
+
 // styles
 const pageStyles = {
   color: "#232129",
   padding: 96,
   fontFamily: "-apple-system, Roboto, sans-serif, serif",
 }
-const headingStyles = {
-  marginTop: 0,
-  marginBottom: 64,
-  maxWidth: 320,
-}
 const headingAccentStyles = {
-  color: "#663399",
+  color: "#f28916",
 }
 const paragraphStyles = {
   marginBottom: 48,
@@ -125,60 +124,59 @@ const links = [
   },
 ]
 
+const SpeakerInfo = ({ title, author, jobTitle, description, photo }) => (
+  <div className={'speaker'}>
+    <div className="speaker__info">
+      <div className="speaker__img">
+        <img src={photo} alt=""/>
+      </div>
+      <div className={'speaker__text'}>
+        <p className={'speaker__author'}>{author}</p>
+        {jobTitle && <span className={'speaker__job-title'}>{jobTitle}</span>}
+      </div>
+    </div>
+    <h3 className={'speaker__title'}>{title}</h3>
+    <p className={'speaker__description'}>
+      {
+        description
+        ?
+        description
+        :
+        'Этот спикер пока не предоставил описание своего доклада. Возможно, оно появится здесь позже, а возможно он сохранит его в тайне.'
+      }
+    </p>
+  </div>
+)
+
 // markup
 const IndexPage = () => {
   return (
     <main style={pageStyles}>
-      <title>Home Page</title>
-      <h1 style={headingStyles}>
-        Congratulations
-        <br />
-        <span style={headingAccentStyles}>— you just made a step to the CORGI Conf!</span>
-        <span role="img" aria-label="Party popper emojis">
-          🎉🎉🎉
-        </span>
-      </h1>
-      <p style={paragraphStyles}>
-        We are encouraged <code style={codeStyles}>so much</code> to see
-        you and your research in the list of our speakers.{" "}
-        <span role="img" aria-label="Sunglasses smiley emoji">
+      <title>GORGI Conf 2021</title>
+      <section className={'section'}>
+        <h1 className={'section__title'}>
+          Congratulations
+          <br />
+          <span style={headingAccentStyles}>— you just made a step to the CORGI Conf!</span>
+          <br />
+          <span role="img" aria-label="Party popper emojis">
+            🎉🎉🎉
+          </span>
+        </h1>
+        <p style={paragraphStyles}>
+          We are encouraged <code style={codeStyles}>so much</code> to see
+          you and your research in the list of our speakers.{" "}
+          <span role="img" aria-label="Sunglasses smiley emoji">
           😎
         </span>
-        <br />
-        <a href="#form">Fill in the application</a>
-      </p>
-      <ul style={listStyles}>
-        <li style={docLinkStyle}>
-          <a
-            style={linkStyle}
-            href={`${docLink.url}?utm_source=starter&utm_medium=start-page&utm_campaign=minimal-starter`}
-          >
-            {docLink.text}
-          </a>
-        </li>
-        {links.map(link => (
-          <li key={link.url} style={{ ...listItemStyles, color: link.color }}>
-            <span>
-              <a
-                style={linkStyle}
-                href={`${link.url}?utm_source=starter&utm_medium=start-page&utm_campaign=minimal-starter`}
-              >
-                {link.text}
-              </a>
-              {link.badge && (
-                <span style={badgeStyle} aria-label="New Badge">
-                  NEW!
-                </span>
-              )}
-              <p style={descriptionStyle}>{link.description}</p>
-            </span>
-          </li>
-        ))}
-      </ul>
-      <img
-        alt="Gatsby G Logo"
-        src="data:image/svg+xml,%3Csvg width='24' height='24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 2a10 10 0 110 20 10 10 0 010-20zm0 2c-3.73 0-6.86 2.55-7.75 6L14 19.75c3.45-.89 6-4.02 6-7.75h-5.25v1.5h3.45a6.37 6.37 0 01-3.89 4.44L6.06 9.69C7 7.31 9.3 5.63 12 5.63c2.13 0 4 1.04 5.18 2.65l1.23-1.06A7.959 7.959 0 0012 4zm-8 8a8 8 0 008 8c.04 0 .09 0-8-8z' fill='%23639'/%3E%3C/svg%3E"
-      />
+          <br />
+          <a href="#form">Fill in the application</a>
+        </p>
+        <div className="speakers-wrapper">
+          {items.map(paper => <SpeakerInfo {...paper} />)}
+        </div>
+        <div className="preview-img" />
+      </section>
     </main>
   )
 }
