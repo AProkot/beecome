@@ -4,4 +4,5 @@ module.exports = {
     title: "My Gatsby Site",
   },
   plugins: ["gatsby-plugin-postcss"],
+  pathPrefix: "/corgiconf",
 };
