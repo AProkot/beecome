@@ -7,22 +7,6 @@ import photoBD from '../images/Anya-bd.jpg';
 
 import items from './items';
 
-// styles
-const pageStyles = {
-  color: "#232129",
-  padding: '96px 96px 0 96px',
-  fontFamily: "-apple-system, Roboto, sans-serif, serif",
-}
-const headingAccentStyles = {
-  color: "#f28916",
-}
-const linkStyle = {
-  color: "#8954A8",
-  fontWeight: "bold",
-  fontSize: 16,
-  verticalAlign: "5%",
-}
-
 const SpeakerInfo = ({ title, author, jobTitle, description, photo }) => (
   <div className={'speaker mt-48'}>
     <div className="speaker__info">
@@ -53,13 +37,14 @@ const IndexPage = () => {
 
   return (
     <>
-      <main style={pageStyles}>
+      <div className="preview-img" />
+      <main className={'main'}>
         <title>GORGI Conf 2021</title>
         <section className={'section'}>
           <h1 className={'section__title'}>
             Поздравляем
             <br />
-            <span style={headingAccentStyles}>— теперь ты на шаг ближе к CORGI Conf!</span>
+            <span className={'text-accent'}>— теперь ты на шаг ближе к CORGI Conf!</span>
             <br />
             <span role="img" aria-label="Party popper emojis">
               🎉🎉🎉
@@ -119,7 +104,6 @@ const IndexPage = () => {
             {items.map(paper => <SpeakerInfo {...paper} />)}
           </div>
           <a href={'#form'} className={'button mt-48'}>Регистрация на CORGI</a>
-          <div className="preview-img" />
         </section>
         <section className={'section mt-96'} id={'form'}>
           <h2 className={'title'}>Регистрация</h2>
@@ -167,7 +151,7 @@ const IndexPage = () => {
           </div>
         </section>
       </main>
-      <footer className={'section footer mt-48'}>
+      <footer className={'section footer'}>
         <p className={'footer__text'}>
           По всем вопросам и предложениям
           <br />

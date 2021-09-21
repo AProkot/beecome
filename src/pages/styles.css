@@ -8,6 +8,12 @@ body {
     scroll-behavior: smooth;
 }
 
+.main {
+    color: #232129;
+    padding: 96px 96px 0 96px;
+    font-family: -apple-system, Roboto, sans-serif, serif;
+}
+
 .mt-24 {
     margin-top: 24px;
 }
@@ -203,6 +209,7 @@ body {
 }
 
 .footer {
+    margin-top: 64px;
     padding: 0 96px;
     font-family: -apple-system, Roboto, sans-serif, serif;
 }
@@ -229,4 +236,31 @@ body {
 
 @media screen and (max-width: 768px) {
 
+    body {
+        margin: 0;
+    }
+
+    .main {
+        padding: 0 24px;
+    }
+
+    .preview-img {
+        position: static;
+        width: 100vw;
+        height: 300px;
+        background-position: center 45%;
+    }
+
+    .section {
+        width: 100%;
+    }
+
+    .section__title {
+        margin-top: 24px;
+        font-size: 32px;
+    }
+
+    .footer {
+        padding: 0 24px;
+    }
 }
