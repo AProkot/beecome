@@ -1,9 +1,9 @@
-import photo1 from '../images/corgi11.jpg';
-import photo2 from '../images/corgi22.jpg';
-import photo3 from '../images/corgi33.jpg';
-import photo4 from '../images/corgi44.jpg';
+import photo1 from './images/corgi11.jpg';
+import photo2 from './images/corgi22.jpg';
+import photo3 from './images/corgi33.jpg';
+import photo4 from './images/corgi44.jpg';
 
-import dAndN from '../images/d&n.jpg';
+import dAndN from './images/d&n.jpg';
 
 export const items = [
     {

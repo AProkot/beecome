@@ -1,11 +1,11 @@
 import * as React from "react"
 import anime from 'animejs/lib/anime.es.js';
 
-import './styles.css'
+import '../styles.css'
 import photo from '../images/Anya.jpg';
 import photoBD from '../images/Anya-bd.jpg';
 
-import items from './items';
+import items from '../items';
 
 const SpeakerInfo = ({ title, author, jobTitle, description, photo }) => (
   <div className={'speaker mt-48'}>
