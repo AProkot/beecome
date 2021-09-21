@@ -3,30 +3,32 @@ import photo2 from '../images/corgi22.jpg';
 import photo3 from '../images/corgi33.jpg';
 import photo4 from '../images/corgi44.jpg';
 
+import dAndN from '../images/d&n.jpg';
+
 export const items = [
     {
         title: 'Самый правдивый гороскоп для Анны\u00A0Сергеевны\u00A0Прокошкиной',
-        author: 'Группа спикеров D и N',
+        author: 'Группа спикеров N и D',
         jobTitle: 'Секретная должность секретного подразделения астрономии',
         description: '',
-        photo: photo2
+        photo: dAndN
     },
     {
-        title: 'Сколько % булочки содержится в каждом из нас?',
+        title: '???',
         author: 'Группа спикеров N и I',
         jobTitle: 'Санкт-Петербургский Гавсударственный Университет',
         description: '',
         photo: photo2
     },
     {
-        title: '23 оттенка Анны Прокошкиной',
+        title: '???',
         author: 'Спикер A',
         jobTitle: 'Доцент филайлогических наук',
         description: '',
         photo: photo4
     },
     {
-        title: 'Каково это - быть хорошим мальчиком?',
+        title: '???',
         author: 'Зарубежный Гость',
         jobTitle: 'Министр Не Твоих Собачьих Дел',
         description: '',

@@ -15,6 +15,7 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
+    "animejs": "^3.2.1",
     "gatsby": "^3.13.1",
     "gatsby-plugin-postcss": "^4.14.0",
     "postcss": "^8.3.6",

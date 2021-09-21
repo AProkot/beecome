@@ -1,39 +1,21 @@
 import * as React from "react"
+import anime from 'animejs/lib/anime.es.js';
 
 import './styles.css'
+import photo from '../images/Anya.jpg';
+import photoBD from '../images/Anya-bd.jpg';
 
 import items from './items';
 
 // styles
 const pageStyles = {
   color: "#232129",
-  padding: 96,
+  padding: '96px 96px 0 96px',
   fontFamily: "-apple-system, Roboto, sans-serif, serif",
 }
 const headingAccentStyles = {
   color: "#f28916",
 }
-const paragraphStyles = {
-  marginBottom: 48,
-}
-const codeStyles = {
-  color: "#8A6534",
-  padding: 4,
-  backgroundColor: "#FFF4DB",
-  fontSize: "1.25rem",
-  borderRadius: 4,
-}
-const listStyles = {
-  marginBottom: 96,
-  paddingLeft: 0,
-}
-const listItemStyles = {
-  fontWeight: 300,
-  fontSize: 24,
-  maxWidth: 560,
-  marginBottom: 30,
-}
-
 const linkStyle = {
   color: "#8954A8",
   fontWeight: "bold",
@@ -41,91 +23,8 @@ const linkStyle = {
   verticalAlign: "5%",
 }
 
-const docLinkStyle = {
-  ...linkStyle,
-  listStyleType: "none",
-  marginBottom: 24,
-}
-
-const descriptionStyle = {
-  color: "#232129",
-  fontSize: 14,
-  marginTop: 10,
-  marginBottom: 0,
-  lineHeight: 1.25,
-}
-
-const docLink = {
-  text: "Documentation",
-  url: "https://www.gatsbyjs.com/docs/",
-  color: "#8954A8",
-}
-
-const badgeStyle = {
-  color: "#fff",
-  backgroundColor: "#088413",
-  border: "1px solid #088413",
-  fontSize: 11,
-  fontWeight: "bold",
-  letterSpacing: 1,
-  borderRadius: 4,
-  padding: "4px 6px",
-  display: "inline-block",
-  position: "relative",
-  top: -2,
-  marginLeft: 10,
-  lineHeight: 1,
-}
-
-// data
-const links = [
-  {
-    text: "Tutorial",
-    url: "https://www.gatsbyjs.com/docs/tutorial/",
-    description:
-      "A great place to get started if you're new to web development. Designed to guide you through setting up your first Gatsby site.",
-    color: "#E95800",
-  },
-  {
-    text: "How to Guides",
-    url: "https://www.gatsbyjs.com/docs/how-to/",
-    description:
-      "Practical step-by-step guides to help you achieve a specific goal. Most useful when you're trying to get something done.",
-    color: "#1099A8",
-  },
-  {
-    text: "Reference Guides",
-    url: "https://www.gatsbyjs.com/docs/reference/",
-    description:
-      "Nitty-gritty technical descriptions of how Gatsby works. Most useful when you need detailed information about Gatsby's APIs.",
-    color: "#BC027F",
-  },
-  {
-    text: "Conceptual Guides",
-    url: "https://www.gatsbyjs.com/docs/conceptual/",
-    description:
-      "Big-picture explanations of higher-level Gatsby concepts. Most useful for building understanding of a particular topic.",
-    color: "#0D96F2",
-  },
-  {
-    text: "Plugin Library",
-    url: "https://www.gatsbyjs.com/plugins",
-    description:
-      "Add functionality and customize your Gatsby site or app with thousands of plugins built by our amazing developer community.",
-    color: "#8EB814",
-  },
-  {
-    text: "Build and Host",
-    url: "https://www.gatsbyjs.com/cloud",
-    badge: true,
-    description:
-      "Now you’re ready to show the world! Give your Gatsby site superpowers: Build and host on Gatsby Cloud. Get started for free!",
-    color: "#663399",
-  },
-]
-
 const SpeakerInfo = ({ title, author, jobTitle, description, photo }) => (
-  <div className={'speaker'}>
+  <div className={'speaker mt-48'}>
     <div className="speaker__info">
       <div className="speaker__img">
         <img src={photo} alt=""/>
@@ -150,34 +49,143 @@ const SpeakerInfo = ({ title, author, jobTitle, description, photo }) => (
 
 // markup
 const IndexPage = () => {
+  let [answer, setAnswer] = React.useState('');
+
   return (
-    <main style={pageStyles}>
-      <title>GORGI Conf 2021</title>
-      <section className={'section'}>
-        <h1 className={'section__title'}>
-          Congratulations
+    <>
+      <main style={pageStyles}>
+        <title>GORGI Conf 2021</title>
+        <section className={'section'}>
+          <h1 className={'section__title'}>
+            Поздравляем
+            <br />
+            <span style={headingAccentStyles}>— теперь ты на шаг ближе к CORGI Conf!</span>
+            <br />
+            <span role="img" aria-label="Party popper emojis">
+              🎉🎉🎉
+            </span>
+          </h1>
+          <div>
+            <p className={'abbr'}><span className={'abbr_color'}>C</span> — Consortium</p>
+            <p className={'abbr'}><span className={'abbr_color'}>O</span> — Of</p>
+            <p className={'abbr'}><span className={'abbr_color'}>R</span> — Researchers</p>
+            <p className={'abbr'}><span className={'abbr_color'}>G</span> — Gorgeous</p>
+            <p className={'abbr'}><span className={'abbr_color'}>I</span> — Individuals</p>
+          </div>
+          <a href={'#form'} className={'button mt-48'}>Хочу на CORGI</a>
+        </section>
+        <section className={'section mt-96'}>
+          <h2 className={'title'}>Почему я здесь?</h2>
+          <p className={'text'}>
+            Если вы получили эту ссылку, значит вы были отобраны для&nbsp;участия в <span className={'text-accent'}>CORGI 2021</span>
+            {" "}
+            <span role="img" aria-label="Sunglasses smiley emoji">
+              😎
+            </span>
+            <br /><br />
+            Наш высокопрофессиональный оргкомитет долго, тщательно и с особым вниманием к деталям отбирает самых лучших
+            исследователей, чтобы дать им возможность подготовить самое звёздное исследование и презентовать его на конференции.
+            В этом году вам повезло и вы стали одним из этих счастливчиков! Естественно не просто так, а потому что вы действительно{' '}
+            <span className={'text-accent'}>Gorgeous Individual</span>.
+            <br /><br />
+            Вы можете зарегистрироваться сейчас или сначала <a href="#agenda" className={'text-accent'}>ознакомиться с программой</a>.
+            <a href="#form" className={'button mt-48'}>Хочу регистрацию</a>
+          </p>
+        </section>
+        <section className={'section mt-96'} id={'info'}>
+          <h2 className={'title'}>Основная информация</h2>
+          <ul className={'list-ul'}>
+            <li className={'text'}>
+              24 сентября, 21:00
+            </li>
+            <li className={'text'}>
+              каждый приглашённый спикер (или группа спикеров) представляет свою презентацию
+            </li>
+            <li className={'text'}>
+              тематика, формат, длительность презентации — любая
+            </li>
+            <li className={'text text-accent'}>
+              поддержка, апплодисменты, веселье и welcome-pack гарантированы!
+            </li>
+          </ul>
+        </section>
+        <section className={'section mt-96'} id={'agenda'}>
+          <h2 className={'title'}>Программа</h2>
+          <p className={'text'}>
+            Пока мы не можем раскрыть все карты, но каждый день будем раскрывать по одному выступлению,
+            чтобы было интереснее следить за наполнением конференции.
+          </p>
+          <div className="speakers-wrapper">
+            {items.map(paper => <SpeakerInfo {...paper} />)}
+          </div>
+          <a href={'#form'} className={'button mt-48'}>Регистрация на CORGI</a>
+          <div className="preview-img" />
+        </section>
+        <section className={'section mt-96'} id={'form'}>
+          <h2 className={'title'}>Регистрация</h2>
+          <p className={'text'}>
+            Чтобы мы знали, что вы — именно тот, кто нам нужен — пожалуйста,{' '}
+            <span className={'text-accent'}>ответьте на несколько вопросов</span>.
+          </p>
+          <div className={'question'}>
+            { !answer &&
+              <>
+                <p className={'text mt-48 question__text'}>
+                  Являетесь ли вы хорошим мальчиком/девочкой?
+                </p>
+                <div className={'question__buttons'}>
+                  <button className={'button mt-24'} onClick={() => setAnswer('goodgirl')}>Да</button>
+                  <button className={'button button_disabled mt-24'} disabled>Нет</button>
+                </div>
+              </>
+              ||
+              answer === 'goodgirl' &&
+                <>
+                  <p className={'text mt-48 question__text'}>
+                    Это вы на фото?
+                  </p>
+                  <img src={photo} alt="" className={'question__photo mt-24'}/>
+                  <div className={'question__buttons'}>
+                    <button className={'button mt-24'} onClick={() => setAnswer('Anya')}>Да</button>
+                    <button className={'button button_disabled mt-24'} disabled>Нет</button>
+                  </div>
+                </>
+              ||
+              answer === 'Anya' &&
+                <p className={'title'}>
+                  Поздравляем
+                  <br />
+                  <span className={'title text-accent'}>— вы участник CORGI&nbsp;Conf!</span>
+                  <br />
+                  <span role="img" aria-label="Party popper emojis">
+                  🎉🎉🎉
+                  </span>
+                  <img src={photoBD} alt="" className={'question__photo mt-24'}/>
+                  <a href={'#info'} className={'button mt-48'}>К основной инфе</a>
+                </p>
+              }
+          </div>
+        </section>
+      </main>
+      <footer className={'section footer mt-48'}>
+        <p className={'footer__text'}>
+          По всем вопросам и предложениям
           <br />
-          <span style={headingAccentStyles}>— you just made a step to the CORGI Conf!</span>
-          <br />
-          <span role="img" aria-label="Party popper emojis">
-            🎉🎉🎉
-          </span>
-        </h1>
-        <p style={paragraphStyles}>
-          We are encouraged <code style={codeStyles}>so much</code> to see
-          you and your research in the list of our speakers.{" "}
-          <span role="img" aria-label="Sunglasses smiley emoji">
-          😎
-        </span>
-          <br />
-          <a href="#form">Fill in the application</a>
+          обращаться к координатору:{' '}
         </p>
-        <div className="speakers-wrapper">
-          {items.map(paper => <SpeakerInfo {...paper} />)}
-        </div>
-        <div className="preview-img" />
-      </section>
-    </main>
+        <ul className={'list-ul footer__list'}>
+          <li className={'text'}>
+            <a href="https://vk.com/inna.netu" className={'footer__text_accent'}>VK</a>
+          </li>
+          <li className={'text'}>
+            <a href="https://t.me/ne_tum" className={'footer__text_accent'}>Telegram</a>
+          </li>
+          <li className={'text'}>
+            <a href="https://www.instagram.com/ne_tumannaya/" className={'footer__text_accent'}>Instagram</a>
+          </li>
+        </ul>
+      </footer>
+    </>
   )
 }
 

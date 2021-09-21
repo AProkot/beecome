@@ -1,9 +1,83 @@
 body {
     background: #242424;
+    scroll-behavior: smooth;
 }
 
 * {
     color: rgba(255, 255, 255, 0.8);
+    scroll-behavior: smooth;
+}
+
+.mt-24 {
+    margin-top: 24px;
+}
+.mt-48 {
+    margin-top: 48px;
+}
+.mt-96 {
+    margin-top: 96px;
+}
+
+.text {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.text-accent {
+    color: #f28916;
+    font-weight: bold;
+    /*text-shadow: 0 0 6px #fff, 0 0 12px #f28916;*/
+}
+
+.title {
+    font-size: 36px;
+    line-height: 1.25;
+}
+
+.list-ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.list-ul li {
+    position: relative;
+    padding-left: 32px;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 12px;
+}
+.list-ul li::before {
+    content: "🎉";
+    display: inline-block;
+    position: absolute;
+    left: 0;
+}
+
+.button {
+    display: block;
+    min-width: 120px;
+    width: fit-content;
+    padding: 12px 20px;
+    text-align: center;
+    background-color: #f28916;
+    text-decoration: none;
+    border: none;
+    border-radius: 42px;
+    font-size: 18px;
+    cursor: pointer;
+}
+.button:hover {
+    background-color: #f7a143;
+    box-shadow: 0 0 12px #f28916;
+}
+
+.button_disabled {
+    opacity: 0.2;
+    cursor: default;
+}
+.button_disabled:hover {
+    background-color: #f28916;
+    box-shadow: none;
 }
 
 .section {
@@ -12,9 +86,9 @@ body {
 
 .section__title {
     margin-top: 0;
-    margin-bottom: 64px;
-    max-width: 420px;
-    font-size: 36px;
+    margin-bottom: 48px;
+    max-width: 520px;
+    font-size: 44px;
     line-height: 1.25;
 }
 
@@ -29,12 +103,30 @@ body {
     background-position: 25%;
 }
 
+.abbr {
+    margin-top: 12px;
+    margin-bottom: 0;
+    font-size: 36px;
+}
+
+.abbr_color {
+    display: inline-block;
+    min-width: 29px;
+    text-align: center;
+    color: #f28916;
+    font-weight: bold;
+}
+
+.section-agenda {
+
+}
+
 .speakers-wrapper {
 
 }
 
 .speaker {
-    margin-bottom: 48px;
+
 }
 
 .speaker__info {
@@ -47,24 +139,25 @@ body {
 
 .speaker__img {
     position: relative;
-    min-width: 124px;
-    width: 124px;
-    min-height: 124px;
-    height: 124px;
+    min-width: 100px;
+    width: 100px;
+    min-height: 100px;
+    height: 100px;
     margin-right: 24px;
     border: 1px solid #eaeaea;
-    border-radius: 124px;
+    border-radius: 100px;
     overflow: hidden;
 }
 
 .speaker__img img {
     display: block;
     width: 100%;
-    min-height: 124px;
+    min-height: 100px;
 }
 
 .speaker__author {
     font-size: 18px;
+    line-height: 1.5;
     font-weight: bold;
     margin-bottom: 0;
     margin-top: 0;
@@ -86,5 +179,54 @@ body {
 
 .speaker__description {
     margin-top: 12px;
+    line-height: 1.5;
 }
 
+.question__text {
+    margin-bottom: 0;
+    font-size: 24px;
+}
+
+.question__buttons {
+    display: flex;
+}
+
+.question__buttons button {
+    display: block;
+    margin-right: 24px;
+}
+
+.question__photo {
+    display: block;
+    width: 300px;
+    height: 300px;
+}
+
+.footer {
+    padding: 0 96px;
+    font-family: -apple-system, Roboto, sans-serif, serif;
+}
+
+.footer__text {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.2);
+}
+
+.footer__text_accent {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.footer__list {
+    margin: 12px 0 32px;
+}
+.footer__list li {
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+@media screen and (max-width: 768px) {
+
+}
