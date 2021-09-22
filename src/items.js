@@ -4,6 +4,7 @@ import photo3 from './images/corgi33.jpg';
 import photo4 from './images/corgi44.jpg';
 
 import dAndN from './images/d&n.jpg';
+import iAndN from './images/i&n.jpg';
 
 export const items = [
     {
@@ -14,11 +15,11 @@ export const items = [
         photo: dAndN
     },
     {
-        title: '???',
+        title: 'Сколько % булочки содержится в каждом из нас?',
         author: 'Группа спикеров N и I',
         jobTitle: 'Санкт-Петербургский Гавсударственный Университет',
         description: '',
-        photo: photo2
+        photo: iAndN
     },
     {
         title: '???',
