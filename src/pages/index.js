@@ -15,7 +15,7 @@ const SpeakerInfo = ({ title, author, jobTitle, description, photo }) => (
       </div>
       <div className={'speaker__text'}>
         <p className={'speaker__author'}>{author}</p>
-        {jobTitle && <span className={'speaker__job-title'}>{jobTitle}</span>}
+        {jobTitle && <p className={'speaker__job-title'}>{jobTitle}</p>}
       </div>
     </div>
     <h3 className={'speaker__title'}>{title}</h3>

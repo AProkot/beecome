@@ -5,6 +5,7 @@ import photo4 from './images/corgi44.jpg';
 
 import dAndN from './images/d&n.jpg';
 import iAndN from './images/i&n.jpg';
+import aAndD from './images/a&d.jpg';
 
 export const items = [
     {
@@ -22,11 +23,11 @@ export const items = [
         photo: iAndN
     },
     {
-        title: '???',
-        author: 'Спикер A',
-        jobTitle: 'Доцент филайлогических наук',
+        title: '23 оттенка Анны Прокошкиной',
+        author: 'Творческий союз АкваДискотека',
+        jobTitle: `Доцент филайлогических наук и член Академии Хукоржеств`,
         description: '',
-        photo: photo4
+        photo: aAndD
     },
     {
         title: '???',
