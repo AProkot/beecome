@@ -81,7 +81,7 @@ const IndexPage = () => {
           <h2 className={'title'}>Основная информация</h2>
           <ul className={'list-ul'}>
             <li className={'text'}>
-              24 сентября, 21:00
+              24 сентября, 23:00
             </li>
             <li className={'text'}>
               каждый приглашённый спикер (или группа спикеров) представляет свою презентацию
