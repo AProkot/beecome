@@ -4,17 +4,24 @@ import anime from 'animejs/lib/anime.es.js';
 import '../styles.css'
 import photo from '../images/Anya.jpg';
 import photoBD from '../images/Anya-bd.jpg';
+import party from '../images/party.png';
 
 import items from '../items';
 
 const SpeakerInfo = ({ title, author, jobTitle, description, photo, isTop = false }) => (
   <div className={'speaker mt-48'}>
     <div className="speaker__info">
-      <div className="speaker__img">
-        <img src={photo} alt=""/>
+      <div className="speaker__img-wrapper">
+        <div className="speaker__img">
+          <img src={photo} alt=""/>
+        </div>
+        {isTop && <img src={party} alt="" className={'top-img'}/>}
       </div>
       <div className={'speaker__text'}>
-        <p className={'speaker__author'}>{author}</p>
+        <p className={'speaker__author'}>
+          {author}
+          {isTop && <span className={'top-badge'}>TOP speaker</span>}
+        </p>
         {jobTitle && <p className={'speaker__job-title'}>{jobTitle}</p>}
       </div>
     </div>
