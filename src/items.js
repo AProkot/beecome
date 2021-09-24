@@ -6,8 +6,18 @@ import photo4 from './images/corgi44.jpg';
 import dAndN from './images/d&n.jpg';
 import iAndN from './images/i&n.jpg';
 import aAndD from './images/a&d.jpg';
+import i from './images/i.jpg';
+import a from './images/a.jpg';
 
 export const items = [
+    {
+        title: 'Оценка динамики результативности контрольно-подкатывательной деятельности представителей государства с позиции меня как ее конечного бенефициара',
+        author: 'Агент Пи',
+        jobTitle: 'Доцент кафедры тикающих часиков',
+        description: '',
+        photo: a,
+        isTop: true
+    },
     {
         title: 'Самый правдивый гороскоп для Анны\u00A0Сергеевны\u00A0Прокошкиной',
         author: 'Группа спикеров N и D',
@@ -30,11 +40,11 @@ export const items = [
         photo: aAndD
     },
     {
-        title: '???',
-        author: 'Зарубежный Гость',
-        jobTitle: 'Министр Не Твоих Собачьих Дел',
+        title: 'Анна Прокошкина как алкоголь',
+        author: 'Хенесиннна Сергеевна',
+        jobTitle: 'Заслуженный сомелье по теоретическому исследованию алкоголя первого разряда',
         description: '',
-        photo: photo1
+        photo: i
     }
 ]
 

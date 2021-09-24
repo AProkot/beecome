@@ -7,7 +7,7 @@ import photoBD from '../images/Anya-bd.jpg';
 
 import items from '../items';
 
-const SpeakerInfo = ({ title, author, jobTitle, description, photo }) => (
+const SpeakerInfo = ({ title, author, jobTitle, description, photo, isTop = false }) => (
   <div className={'speaker mt-48'}>
     <div className="speaker__info">
       <div className="speaker__img">
