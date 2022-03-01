@@ -1,50 +1,29 @@
-import photo1 from './images/corgi11.jpg';
-import photo2 from './images/corgi22.jpg';
-import photo3 from './images/corgi33.jpg';
-import photo4 from './images/corgi44.jpg';
-
-import dAndN from './images/d&n.jpg';
-import iAndN from './images/i&n.jpg';
-import aAndD from './images/a&d.jpg';
-import i from './images/i.jpg';
-import a from './images/a.jpg';
+import bee from './images/bee2.jpg';
 
 export const items = [
     {
-        title: 'Оценка динамики результативности контрольно-подкатывательной деятельности представителей государства с позиции меня как ее конечного бенефициара',
+        title: 'Как всё успевать и другие вопросы на которые я не знаю ответа',
         author: 'Агент Пи',
-        jobTitle: 'Доцент кафедры тикающих часиков',
+        jobTitle: 'Доцент кафедры просроченных дедлайнов',
         description: '',
-        photo: a,
+        photo: bee,
         isTop: true
     },
     {
-        title: 'Самый правдивый гороскоп для Анны\u00A0Сергеевны\u00A0Прокошкиной',
-        author: 'Спикеры Ты крыса, я крыса',
-        jobTitle: 'Доктор зодиакальных асцендентов и Доцент кафедры звёздных Галактик',
+        title: 'Почему бал не самое важное мероприятие СПбСО',
+        author: 'Shisha',
+        jobTitle: 'Выпусник академии горящих ж̶о̶п̶ сердец',
         description: '',
-        photo: dAndN
+        photo: bee,
+        isTop: true
     },
     {
-        title: 'Сколько % булочки содержится в каждом из нас?',
-        author: 'Спикеры КС',
-        jobTitle: 'Санкт-Петербургский Гавсударственный Университет',
+        title: 'Информация о докладе появится позже',
+        author: 'Неизвестно',
+        jobTitle: '',
         description: '',
-        photo: iAndN
-    },
-    {
-        title: '23 оттенка Анны Прокошкиной',
-        author: 'Творческий союз АкваДискотека',
-        jobTitle: `Доцент филайлогических наук и член Академии Хукоржеств`,
-        description: '',
-        photo: aAndD
-    },
-    {
-        title: 'Анна Прокошкина как алкоголь',
-        author: 'Хенесиннна Сергеевна',
-        jobTitle: 'Заслуженный сомелье по теоретическому исследованию алкоголя первого разряда',
-        description: '',
-        photo: i
+        photo: bee,
+        isTop: false
     }
 ]
 
