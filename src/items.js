@@ -1,4 +1,6 @@
 import bee from './images/bee2.jpg';
+import ann from './images/pro.jpg';
+import sereja from './images/sereja.jpg';
 
 export const items = [
     {
@@ -6,7 +8,7 @@ export const items = [
         author: 'Агент Пи',
         jobTitle: 'Доцент кафедры просроченных дедлайнов',
         description: '',
-        photo: bee,
+        photo: ann,
         isTop: true
     },
     {
@@ -14,7 +16,7 @@ export const items = [
         author: 'Shisha',
         jobTitle: 'Выпусник академии горящих ж̶о̶п̶ сердец',
         description: '',
-        photo: bee,
+        photo: sereja,
         isTop: true
     },
     {
