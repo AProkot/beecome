@@ -1,10 +1,11 @@
 import bee from './images/bee2.jpg';
-import ann from './images/pro.jpg';
-import sereja from './images/sereja.jpg';
+import ann from './images/ann.png';
+import sereja from './images/seryoja.jpg';
+import leva from './images/leva.png'
 
 export const items = [
     {
-        title: 'Как всё успевать и другие вопросы на которые я не знаю ответа',
+        title: 'Оценка подобия СПбГУ и некоторого _другого_ государственного объединения',
         author: 'Агент Пи',
         jobTitle: 'Доцент кафедры просроченных дедлайнов',
         description: '',
@@ -12,11 +13,19 @@ export const items = [
         isTop: true
     },
     {
-        title: 'Почему бал не самое важное мероприятие СПбСО',
-        author: 'Shisha',
-        jobTitle: 'Выпусник академии горящих ж̶о̶п̶ сердец',
-        description: '',
+        title: 'Жители ГУ-лэнда',
+        author: 'Dr. Shisha',
+        jobTitle: 'Институт биологии развития РАБ',
+        description: 'Разновидности бойцов и как правильно за ними ухаживать.',
         photo: sereja,
+        isTop: true
+    },
+    {
+        title: 'Принцип действия губозакаточной машинки',
+        author: 'Лёвик',
+        jobTitle: 'Кандидат мерчовых наук, специалист в области фикспрайса',
+        description: 'Как мягко намекнуть бойцу, что вместо фейерверка, которого он хочет на меро, будут в лучшем случае бенгальские огни, и то не факт.',
+        photo: leva,
         isTop: true
     },
     {
