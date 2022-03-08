@@ -29,8 +29,8 @@ export const items = [
         isTop: true
     },
     {
-        title: 'Информация о докладе появится позже',
-        author: 'Неизвестно',
+        title: 'Здесь может быть ваш доклад',
+        author: 'Здесь может быть ваше имя',
         jobTitle: '',
         description: '',
         photo: bee,
