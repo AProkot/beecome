@@ -2,6 +2,7 @@ import bee from './images/bee2.jpg';
 import ann from './images/ann.png';
 import sereja from './images/seryoja.jpg';
 import leva from './images/leva.png'
+import tv from './images/tandv.png'
 
 export const items = [
     {
@@ -26,6 +27,14 @@ export const items = [
         jobTitle: 'Кандидат мерчовых наук, специалист в области фикспрайса',
         description: 'Как мягко намекнуть бойцу, что вместо фейерверка, которого он хочет на меро, будут в лучшем случае бенгальские огни, и то не факт.',
         photo: leva,
+        isTop: true
+    },
+    {
+        title: 'Не «в мире животных»',
+        author: 'УниCUM',
+        jobTitle: 'Кандидаты в доктора выгоревших наук',
+        description: '',
+        photo: tv,
         isTop: true
     },
     {
