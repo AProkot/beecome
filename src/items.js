@@ -3,6 +3,7 @@ import ann from './images/ann.png';
 import sereja from './images/seryoja.jpg';
 import leva from './images/leva.png'
 import tv from './images/tandv.png'
+import sonya from './images/sonya.png'
 
 export const items = [
     {
@@ -35,6 +36,14 @@ export const items = [
         jobTitle: 'Кандидаты в доктора выгоревших наук',
         description: '',
         photo: tv,
+        isTop: true
+    },
+    {
+        title: 'Утренний макияж или базовый набор масок отрядника',
+        author: 'Сон (я/нам только снится)',
+        jobTitle: 'Мастер маскировочного спорта',
+        description: '',
+        photo: sonya,
         isTop: true
     },
     {
